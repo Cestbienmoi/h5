@@ -298,7 +298,7 @@
             this.disposed = true;
             this.messageBuffer = [];
 
-            if (state === "open") {
+            if (this.state === "open") {
                 this.state = "closesent";
                 this.socket.close();
             }

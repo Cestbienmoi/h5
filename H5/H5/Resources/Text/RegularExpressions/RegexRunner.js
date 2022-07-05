@@ -42,7 +42,7 @@
             }
 
             if (length < 0 || length > input.Length) {
-                throw new ArgumentOutOfRangeException("length", "Length cannot be less than 0 or exceed input length.");
+                throw new System.ArgumentOutOfRangeException.$ctor4("length", "Length cannot be less than 0 or exceed input length.");
             }
 
             this._runtext = input;

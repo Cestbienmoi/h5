@@ -31,7 +31,7 @@
         },
 
         _getLeftSubstring: function () {
-            return this._text.slice(0, _index);
+            return this._text.slice(0, this._index);
         },
 
         _getRightSubstring: function () {

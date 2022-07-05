@@ -484,11 +484,11 @@
             Class.$base = base;
 
             if (extend && !extend[0].$$initCtor) {
-                var cls = extend[0];
+                var cls2 = extend[0];
                 var $$initCtor = function () { };
-                $$initCtor.prototype = cls.prototype;
-                $$initCtor.prototype.constructor = cls;
-                $$initCtor.prototype.$$fullname = H5.Reflection.getTypeFullName(cls);
+                $$initCtor.prototype = cls2.prototype;
+                $$initCtor.prototype.constructor = cls2;
+                $$initCtor.prototype.$$fullname = H5.Reflection.getTypeFullName(cls2);
 
                 prototype = new $$initCtor();
             }

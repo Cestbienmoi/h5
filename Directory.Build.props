@@ -1,0 +1,5 @@
+<Project>
+ <PropertyGroup>
+    <UseLocalH5>true</UseLocalH5>
+ </PropertyGroup>
+</Project>

@@ -485,7 +485,7 @@
                 }
             }
 
-            return _pattern.slice(startpos, this._textpos());
+            return this._pattern.slice(startpos, this._textpos());
         },
 
         _scanCharEscape: function () {
@@ -546,7 +546,7 @@
                 return false;
             }
 
-            return _capnames[capname] != null;
+            return this._capnames[capname] != null;
         },
 
         _isWordChar: function (ch) {

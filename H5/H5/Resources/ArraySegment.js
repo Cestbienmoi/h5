@@ -45,7 +45,7 @@
             }
 
             if (array.length - this.offset < this.count) {
-                throw new ArgumentException();
+                throw new System.ArgumentException.ctor();
             }
         },
 

@@ -1054,7 +1054,7 @@
             if (H5.isArray(from) && H5.isFunction(to.add || to.push)) {
                 fn = H5.isArray(to) ? to.push : to.add;
 
-                for (i = 0; i < from.length; i++) {
+                for (let i = 0; i < from.length; i++) {
                     var item = from[i];
 
                     if (!H5.isArray(item)) {
@@ -1074,7 +1074,7 @@
                         var descriptor = null;
 
                         if (descriptors) {
-                            for (var i = descriptors.length - 1; i >= 0; i--) {
+                            for (let i = descriptors.length - 1; i >= 0; i--) {
                                 if (descriptors[i].name === key) {
                                     descriptor = descriptors[i];
 

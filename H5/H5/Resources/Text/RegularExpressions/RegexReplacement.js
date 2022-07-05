@@ -74,7 +74,7 @@
                             match = match.nextMatch();
                         } while (match.getSuccess());
 
-                        sb = new StringBuilder();
+                        //sb = new StringBuilder(); //FA202206 very strange but i do not understand what happens here
 
                         if (prevat > 0) {
                             sb += sb.slice(0, prevat);
@@ -257,7 +257,7 @@
         },
 
         getPattern: function () {
-            return _rep;
+            return this._rep;
         },
 
         replacement: function (match) {
@@ -390,7 +390,7 @@
             var r;
             var i;
 
-            for (i = _rules.length - 1; i >= 0; i--) {
+            for (i = this._rules.length - 1; i >= 0; i--) {
                 r = this._rules[i];
 
                 if (r >= 0) {

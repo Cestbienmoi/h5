@@ -118,7 +118,11 @@
         },
 
         load: function (name) {
-            return System.Reflection.Assembly.assemblies[name] || require(name);
+            var r = System.Reflection.Assembly.assemblies[name];
+            if (!r && typeof require === "function") {
+                r = require(name);
+            }
+            return r;
         },
 
         getGenericTypeDefinition: function (type) {
@@ -993,9 +997,9 @@
                     }
                 }
 
-                var v = orig.apply(this, args);
+                var v2 = orig.apply(this, args);
 
-                return v != null && mi.box ? mi.box(v) : v;
+                return v2 != null && mi.box ? mi.box(v2) : v2;
             };
 
             return bind !== false ? H5.fn.bind(target, method) : method;
